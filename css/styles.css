@@ -11,6 +11,8 @@
   --font-color-link-footer:rgba(255, 255, 255, 0.6);
   --color-icon: #AFB1B8;
   --bg-icon-footer: rgba(255, 255, 255, 0.1);
+  --bg-position-block: rgba(47, 48, 58, 0.8);
+  --bg-overlay: rgba(33, 150, 243, 0.9);
 }
 
 body {
@@ -19,6 +21,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
 }
+
 .container {
   width: 1200px;
   margin-left: auto;
@@ -67,7 +70,6 @@ img {
 {
   color: var(--accent-color);
 }
-
 
 .logo-style {
   color: var(--secondary-logo-color);
@@ -127,6 +129,24 @@ img {
 .site-nav .link.current {
   color: var(--accent-color);
 }
+
+.nav-item {
+  position: relative;
+}
+
+.current:hover::after {
+  content: '';
+  /* min-width: 48px; */
+  height: 4px;
+  display: flex;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
 /* contacts  */
 
 .contacts {
@@ -271,10 +291,35 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* list of images */
+/* affairs */
 
 .images {
 display: flex;
+}
+
+.affairs {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.affairs .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 370px;
+  height: 70px;
+  
+  background-color: var(--bg-position-block);
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+
+  position: absolute;
 }
 
 /* examples of main page */
@@ -534,6 +579,38 @@ display: flex;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+
+.thumb {
+  position: relative;
+  
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-overlay);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.overlay-text {
+  margin: 0;
+  width: 322px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+}
+
+.link-examples:hover .overlay {
+  opacity: 1;
 }
 
 .examp-stand {
