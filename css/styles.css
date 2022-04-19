@@ -15,7 +15,7 @@
   --bg-overlay: rgba(33, 150, 243, 0.9);
   --bg-backdrop: rgba(0, 0, 0, 0.2);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --duration: 500ms;
+  --duration: 250ms;
 }
 
 body {
