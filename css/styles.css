@@ -147,7 +147,7 @@ img {
 
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: -1px;
 
   display: flex;
 
@@ -434,7 +434,6 @@ display: flex;
 .staff-icon:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
-  
 }
 
 .bgcolor-staff {
@@ -578,8 +577,25 @@ display: flex;
   text-transform: uppercase;
   color: var(--primary-white-color);
 }
+
+.footer-icon {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-icon);
+  
+    transition: background-color var(--duration) var(--timing-function);
+}
 .color-footer-icon {
   fill: var(--primary-white-color);
+  }
+
+.footer-icon:hover,
+.footer-icon:focus {
+  background-color: var(--accent-color);
 }
 
 .circle {
@@ -661,14 +677,22 @@ display: flex;
   margin-bottom: 0;
 }
 
+.link-examples {
+  display: block;
+  color: var(--primary-text-color);
+  text-decoration: none;
+
+  transition: box-shadow var(--duration) var(--timing-function);
+}
+
 .link-examples:hover,
 .link-examples:focus
  {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
-
 }
+
 
 .thumb {
   position: relative;
@@ -743,10 +767,69 @@ display: flex;
   letter-spacing: 0.03em;
 }
 
-.link-examples {
+/* form */
+.form {
+ margin-left: 93px;
+ display: flex;
+ flex-direction: column;
+ 
+ padding: 0;
+
+}
+.wrapper {
+  display: flex;
+}
+
+.form-input {
+  width: 358px;
+  
+  
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--bg-color-footer-header);
+  color: var(--font-color-link-footer);
+
+}
+.form-text {
   display: block;
-  color: var(--primary-text-color);
-  text-decoration: none;
+  margin-bottom: 20px;
+  
+  
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  
+
+}
+.input-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  margin-left: 12px;
+  padding: 10px 28px 10px 29px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+.icon-input {
+  margin-left: 10px;
 }
 
 /* #2F303A color back hero */
